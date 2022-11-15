@@ -26,6 +26,7 @@ share/python-wheels/
 .installed.cfg
 *.egg
 MANIFEST
+*.bak
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
@@ -127,3 +128,20 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# IDEAS, Text Editors etc.
+.idea/
+**/.DS_STORE
+# These need to be loaded in by the user for the thing to work.
+credentials/*.json
+# These need to be uploaded somewhere else probably like a google drive.
+audio_outputs/*.mp3
+# These are generated and should be stored in drive as well.
+samples/*json*
+# These are also generated
+screenshots/*.png
+screenshots/*.gif
+screenshots/*.mp4
+# These are the outputs that need to be generated and sent to youtube.
+videos/*.mp4
+
