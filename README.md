@@ -3,17 +3,18 @@
 This repo can be used to block and ban users who post scam messages on accounts.
 
 It uses V3 of the YouTube API to do so by:
-    - Getting all video ids
-    - Getting comment threads from videos ids.
-    - Get inner comments using a comment api.
-    - Compares the comment's author and text to the following list of key words in `./src/YouTubeApi.py` that need to be set by the user at the moment:
-        ```
-                BANNED_USERNAME_KEYWORDS = []
-                BLOCKED_USERNAME_KEYWORDS = []
-                BLOCKED_COMMENT_KEYWORDS = []
-        ```
-    - Use `setModerationStatus` to delete the comment if any words from `BLOCKED_USERNAME_KEYWORDS` are found in the `username` and `BLOCKED_COMMENT_KEYWORDS` for comments.
-    - If the username contains anything from `BANNED_USERNAME_KEYWORDS` then they will get blocked from your channel as well.
+
+* Getting all video ids
+* Getting comment threads from videos ids.
+* Get inner comments using a comment api.
+* Compares the comment's author and text to the following list of key words in `./src/YouTubeApi.py` that need to be set by the user at the moment:
+    ```
+        BANNED_USERNAME_KEYWORDS = []
+        BLOCKED_USERNAME_KEYWORDS = []
+        BLOCKED_COMMENT_KEYWORDS = []
+    ```
+ * Use `setModerationStatus` to delete the comment if any words from `BLOCKED_USERNAME_KEYWORDS` are found in the `username` and `BLOCKED_COMMENT_KEYWORDS` for comments.
+ * If the username contains anything from `BANNED_USERNAME_KEYWORDS` then they will get blocked from your channel as well.
 
 ## Setup
 
